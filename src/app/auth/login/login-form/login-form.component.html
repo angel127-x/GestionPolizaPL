@@ -1,0 +1,13 @@
+<form action="" [formGroup]="formGroup()" (submit)="enviarForm()">
+    <app-input
+    textoLabel="Correo"
+    [control]="formGroup().controls.correo"
+    formControlName="correo"
+    />
+    <app-input
+    textoLabel="Contraseña"
+    [control]="formGroup().controls.contrasenia"
+    formControlName="correo"
+    />
+    <button>login</button>
+</form>

@@ -1,0 +1,31 @@
+<!-- @let listaUsuario = listaUsuario(); -->
+<table>
+    <thead>
+        <tr>
+            <dt>Actualizar</dt>
+            <td>Imagen</td>
+            <td>Nombre</td>
+            <td>Telefono</td>
+            <td>Fecha de nacimiento</td>
+            <td>Rol</td>
+            <td>Genero</td>
+            <td>Eliminar</td>
+        </tr>
+    </thead>
+    <tbody>
+        @for (usuario of listaUsuario(); track usuario.idUsuario) {
+            <tr>
+                <td>Actualizar</td>
+                <td>
+                    <img style="width: 100px; height: 100px;" src="data:image/*;base64,{{usuario.imagenByte}}" alt="usuario">
+                </td>
+                <td>{{usuario.nombre}} {{usuario.apellidoPaterno}} {{usuario.apellidoMaterno}}</td>
+                <td>{{usuario.telefono}}</td>
+                <td>{{usuario.fechaDeNacimiento}}</td>
+                <td>{{usuario.rol.nombreRol}}</td>
+                <td>{{usuario.genero.nombreGenero}}</td>
+                <td>Eliminar</td>
+            </tr>
+        }
+    </tbody>
+</table>

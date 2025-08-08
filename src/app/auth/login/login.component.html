@@ -1,0 +1,5 @@
+@let items = form.controls.items.controls;
+
+@for(formGroup of items; track $index){
+    <app-login-form [formGroup]="formGroup"/>
+}
