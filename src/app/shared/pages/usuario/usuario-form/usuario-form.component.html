@@ -1,0 +1,5 @@
+@let items = form.controls.items.controls;
+
+@for (formGroup of items; track formGroup.controls.idUsuario.value) {
+    <app-usuario-form-child [formGroup]="formGroup" [listaRoles]="listaRol() ?? []"/>
+}

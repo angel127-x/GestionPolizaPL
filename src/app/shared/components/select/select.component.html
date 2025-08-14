@@ -1,0 +1,9 @@
+
+<select name={{textSelect()}} [value]="internalValue" (change)="onSelectionChange($event)">
+  @if(defaultOption()){
+      <option value="">{{defaultOptionText()}}</option>
+  }
+  @for (dato of datos(); track $index) {
+    <option [value]="getId(dato)">{{dato.nombre}}</option>
+  }
+</select>

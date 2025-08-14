@@ -1,0 +1,17 @@
+<form (submit)="enviarForm()" [formGroup]="formGroup()">
+  <app-input textoLabel="Nombre" [control]="formGroup().controls.nombre"/>
+  <app-input textoLabel="Apellido Paterno" [control]="formGroup().controls.apellidoPaterno"/>
+  <app-input textoLabel="Apellido Materno" [control]="formGroup().controls.apellidoMaterno"/>
+  <app-input textoLabel="Correo Electronico" [control]="formGroup().controls.correo"/>
+  <app-input textoLabel="Contraseña" [control]="formGroup().controls.contrasena"/>
+  <app-input textoLabel="Telefono" [control]="formGroup().controls.telefono"/>
+  <app-input textoLabel="Fecha de Nacimiento" [control]="formGroup().controls.fechaDeNacimiento"/>
+  <select name="" id="" formGroupName="rol" (change)="changeSelect($event)">
+    @for(rol of listaRoles(); track rol.idRol){
+      <option value="{{rol.idRol}}">{{rol.nombre}}</option>
+    }
+  </select>
+  <div>
+    <button>Enviar</button>
+  </div>
+</form>

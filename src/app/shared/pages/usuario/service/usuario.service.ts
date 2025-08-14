@@ -43,4 +43,8 @@ export class UsuarioService {
     })
   }
 
+  // usuarioAdd(){
+  //   this.http.post<Result>(`${this.API_URL}UsuarioAdd`)
+  // }
+
 }
